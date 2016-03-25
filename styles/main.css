@@ -1,3 +1,6 @@
-.partial-login {
-	/*font-weight: bold;*/
-}
+body {
+  background-color: #FDEF46;
+  color: #26C8EF; }
+
+h1 {
+  font-weight: bold; }
