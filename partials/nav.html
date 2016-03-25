@@ -1,0 +1,11 @@
+<nav>
+  <ul>
+    <!-- <li><a href="#/"><span ng-include="'partials/search.html'"></span></a></li> -->
+    <li class="align-right">
+      <a href="#/logout" ng-click="logout()">
+        <span ng-if="isAuthenticated()">Logout</span>
+        <span ng-if="!isAuthenticated()">Login</span>
+      </a>
+    </li>
+  </ul>
+</nav>

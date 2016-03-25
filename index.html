@@ -1,0 +1,41 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Sccssr | The Dashboard for Your Life</title>
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+</head>
+
+<body ng-app="GoalApp">
+  <div ng-controller="PageCtrl">
+    <div ng-view></div>
+  </div>
+
+  <script src="lib/bower_components/angular/angular.min.js"></script>
+  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script src="lib/bower_components/firebase/firebase.js"></script>
+  <script src="lib/bower_components/angularfire/dist/angularfire.min.js"></script>
+
+  <script src="app/app.js"></script>
+  <script src="app/factories/GoalsFactory.js"></script>
+  <script src="app/factories/AuthFactory.js"></script>
+  <script src="app/controllers/PageCtrl.js"></script>
+  <script src="app/controllers/GoalCtrl.js"></script>
+  <script src="app/controllers/GoalDetailCtrl.js"></script>
+  <script src="app/controllers/GoalFormCtrl.js"></script>
+  <script src="app/controllers/LoginCtrl.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

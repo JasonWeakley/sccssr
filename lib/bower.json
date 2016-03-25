@@ -1,0 +1,25 @@
+{
+  "name": "frontend",
+  "authors": [
+    "Jason Weakley <jason.b.weakley@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.2",
+    "firebase": "^2.4.1",
+    "angular": "^1.5.2",
+    "angular-route": "^1.5.2",
+    "angularfire": "^1.1.4"
+  }
+}
