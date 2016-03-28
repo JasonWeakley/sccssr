@@ -5,8 +5,9 @@ Sccssr.controller("LoginCtrl", [
 	"$location",
 	"authFactory",
 	"firebaseURL",
+	"$http",
 
-	function ($scope, $location, authFactory, firebaseURL) {
+	function ($scope, $location, authFactory, firebaseURL, $http) {
 		console.log("LoginCtrl is working");
 		// Local variables
 		let ref = new Firebase(firebaseURL);

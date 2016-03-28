@@ -1,6 +1,6 @@
 "use strict";
 
-const Sccssr = angular.module("GoalApp", ["ngRoute", "firebase"])
+const Sccssr = angular.module("GoalApp", ["ngRoute", "firebase", "ui.sortable"])
 	.constant("firebaseURL", "https://sccssr.firebaseio.com/");
 
 // Define a promise for any view that needs an authenticated user before it will resolve (see below)

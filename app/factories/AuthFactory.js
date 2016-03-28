@@ -54,19 +54,3 @@ Sccssr.factory("authFactory", (firebaseURL, $q, $http) => {
 	};
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
