@@ -4,6 +4,7 @@
 	<form>
     Goal name: <input type="text" autofocus="true" ng-model="newGoal.name" />
     Goal type: <input type="text" ng-model="newGoal.type" />
+    Objective: <input type="text" maxlength="140" ng-model="newGoal.objective" />
   	Start date: <input type="date" ng-model="newGoal.startDate" />
   	End date: <input type="date" ng-model="newGoal.endDate" />
 	  <button ng-click="addGoal()">Add Goal</button>
