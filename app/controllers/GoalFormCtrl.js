@@ -13,7 +13,8 @@ Sccssr.controller("GoalFormCtrl",
 			type: "",
 			uid: "",
 			startDate: "",
-			endDate: ""
+			endDate: null,
+			objective: null
 		};
 
 		let ref = new Firebase("https://sccssr.firebaseio.com/goals");
@@ -33,7 +34,8 @@ Sccssr.controller("GoalFormCtrl",
 				type: $scope.newGoal.type,
 				endDate: $scope.newGoal.endDate,
 				startDate: $scope.newGoal.startDate,
-				uid: $scope.userId
+				uid: $scope.userId,
+				objective: $scope.objective
 			})
 
 			// The $http.post() method returns a promise, so you can use then()
