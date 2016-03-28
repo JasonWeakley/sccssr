@@ -3,7 +3,8 @@
   &lt;&lt; <a href="/#/">Back to Dashboard</a>
   <div>
     <h1>{{ selectedGoal.name }}</h1>
-    Type: {{ selectedGoal.type }}
+    <p>Type: {{ selectedGoal.type }}</p>
+    <p>End Date: {{ selectedGoal.endDate }}</p>
   </div>
 	<button id="{{selectedGoal.id}}" ng-click="showEditField()">Edit</button>
   <button id="{{selectedGoal.id}}" ng-click="deleteGoal($event)">Delete</button>
