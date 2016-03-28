@@ -1,11 +1,9 @@
 <section class="partial-login">
   <h1>Login or Register</h1>
-  <div>
+  <form>
     Email: <input type="text" autofocus="true" ng-model="account.email" />
-  </div>
-  <div>
-    Password: <input type="password" ng-model="account.password" />
-  </div>
+    Password: <input type="password" ng-model="account.password" ng-keypress="$event.which === 13 && checkRegistration()" />
+  </form>
   <button ng-click="login()">Login</button>
   <button ng-click="register()">Register</button>
 </section>

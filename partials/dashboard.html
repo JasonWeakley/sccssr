@@ -2,11 +2,12 @@
   <nav ng-include="'partials/nav.html'"></nav>
 	<h1>Welcome to your Dashboard</h1>
 
+		<ul ui-sortable ng-model="goals">
+		  <li ng-repeat="goal in goals">
+		  	<a href="#/goals/{{ goal.id }}">{{ goal.name }}</a>
+	  	</li>
+		</ul>
 		
-    <div ng-repeat="goal in goals">
-      <a href="#/goals/{{ goal.id }}">{{ goal.name }}</a>
-    </div>
-
 	  <div style="margin-top: 40px;">
       <a href="#/goals/new">Create New Goal</a>
     </div>
