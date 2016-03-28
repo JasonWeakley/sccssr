@@ -3,6 +3,10 @@ $blu-do: #26C8EF; // Do Over color scheme
 // $serif-do: 
 // $sans-do:
 
+input {
+	display: block;
+}
+
 body {
 	background-color: $yel-do;
 	color: $blu-do;

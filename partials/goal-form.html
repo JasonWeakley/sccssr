@@ -1,10 +1,11 @@
 <section class="goal-form">
   <h1>Add a new goal</h1>
-  <div>
+
+	<form>
     Goal name: <input type="text" autofocus="true" ng-model="newGoal.name" />
-  </div>
-  <div>
     Goal type: <input type="text" ng-model="newGoal.type" />
-  </div>
-  <button ng-click="addGoal()">Add Goal</button>
+  	End date: <input type="date" ng-model="newGoal.endDate" />
+	  <button ng-click="addGoal()">Add Goal</button>
+	</form>
+
 </section>

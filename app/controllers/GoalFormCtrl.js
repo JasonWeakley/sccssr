@@ -11,7 +11,8 @@ Sccssr.controller("GoalFormCtrl",
 		$scope.newGoal = {
 			name: "",
 			type: "",
-			uid: ""
+			uid: "",
+			endDate: ""
 		};
 
 		let ref = new Firebase("https://sccssr.firebaseio.com/goals");
@@ -29,6 +30,7 @@ Sccssr.controller("GoalFormCtrl",
 			JSON.stringify({
 				name: $scope.newGoal.name,
 				type: $scope.newGoal.type,
+				endDate: $scope.newGoal.endDate,
 				uid: $scope.userId
 			})
 
