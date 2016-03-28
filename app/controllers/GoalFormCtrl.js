@@ -12,6 +12,7 @@ Sccssr.controller("GoalFormCtrl",
 			name: "",
 			type: "",
 			uid: "",
+			startDate: "",
 			endDate: ""
 		};
 
@@ -31,6 +32,7 @@ Sccssr.controller("GoalFormCtrl",
 				name: $scope.newGoal.name,
 				type: $scope.newGoal.type,
 				endDate: $scope.newGoal.endDate,
+				startDate: $scope.newGoal.startDate,
 				uid: $scope.userId
 			})
 
