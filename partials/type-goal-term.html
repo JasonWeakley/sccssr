@@ -1,0 +1,11 @@
+<section>
+	<nav ng-include="'partials/nav.html'"></nav>
+	<div >
+    <h1>{{ selectedGoal.name }}</h1>
+  	<input type="text" name="nameInput" placeholder="{{ selectedGoal.name }}" ng-model="selectedGoal.name">
+    <p>Type: {{ selectedGoal.type }}</p>
+    <p>Objective: {{ selectedGoal.objective }}</p>
+    <p>Start Date: {{ selectedGoal.startDate }}</p>
+    <p>End Date: {{ selectedGoal.endDate }}</p>
+  </div>
+</section>

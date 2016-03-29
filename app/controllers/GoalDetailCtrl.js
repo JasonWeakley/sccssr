@@ -28,12 +28,15 @@ Sccssr.controller("GoalDetailCtrl",
   			});
 
   			$scope.selectedGoal = $scope.goals.filter(goal => goal.id === $routeParams.goalId)[0];
+        $scope.selectedGoal.startDate = new Date($scope.selectedGoal.startDate);
+        $scope.selectedGoal.endDate = new Date($scope.selectedGoal.startDate);
+        console.log("selectedGoal.startDate", typeof($scope.selectedGoal.startDate));
         console.log("Selected Goal",$scope.selectedGoal);
-  		},
+      },
 
-  		// Handle reject() from the promise
-  		err => console.log(err)
-		);
+      // Handle reject() from the promise
+      err => console.log(err)
+    );
 
 
 

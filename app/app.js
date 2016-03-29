@@ -39,7 +39,12 @@ Sccssr.config(["$routeProvider",
         controller: "LoginCtrl"
       }).
       when("/goals/new", {
-        templateUrl: "partials/goal-form.html",
+        templateUrl: "partials/add-new-goal.html",
+        controller: "GoalFormCtrl",
+        resolve: { isAuth }
+      }).
+      when("/goals/term", {
+      	templateUrl: "partials/type-goal-term.html",
         controller: "GoalFormCtrl",
         resolve: { isAuth }
       }).
