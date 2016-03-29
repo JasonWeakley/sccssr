@@ -8,13 +8,15 @@ Sccssr.controller("GoalFormCtrl",
 
 	function ($scope, $location, $http) {
 		// Default property values for keys bound to input fields
+		// All of the properties need to be defined here and in the JSON.stringify below, but only certain ones will be called upon in partials
 		$scope.newGoal = {
 			name: "",
 			type: "",
 			uid: "",
-			startDate: "",
+			startDate: new Date(newGoal.startDate),
 			endDate: null,
-			objective: null
+			objective: null,
+			counter: 0
 		};
 
 		let ref = new Firebase("https://sccssr.firebaseio.com/goals");
@@ -35,7 +37,8 @@ Sccssr.controller("GoalFormCtrl",
 				endDate: $scope.newGoal.endDate,
 				startDate: $scope.newGoal.startDate,
 				uid: $scope.userId,
-				objective: $scope.objective
+				objective: $scope.objective,
+				counter: $scope.counter
 			})
 
 			// The $http.post() method returns a promise, so you can use then()
