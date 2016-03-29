@@ -7,3 +7,8 @@ body {
 
 h1 {
   font-weight: bold; }
+
+.plus-goal {
+  font-family: Arial;
+  font-size: 6em;
+  text-decoration: none; }
