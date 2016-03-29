@@ -7,6 +7,7 @@ Sccssr.controller("GoalFormCtrl",
 	"$http",
 
 	function ($scope, $location, $http) {
+		newGoal = {};
 		// Default property values for keys bound to input fields
 		// All of the properties need to be defined here and in the JSON.stringify below, but only certain ones will be called upon in partials
 		$scope.newGoal = {
