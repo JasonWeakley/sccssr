@@ -8,8 +8,10 @@ Sccssr.controller("GoalDetailCtrl",
   "$location",
   "goalFactory",
   "authFactory",
+  "$firebase",
+  "Firebase",
 
-  function ($scope, $routeParams, $http, $location, getGoals, authFactory) {
+  function ($scope, $routeParams, $http, $location, getGoals, authFactory, $firebase, Firebase) {
 
   	// Default properties for bround variables
   	$scope.goals = [];
@@ -48,7 +50,7 @@ Sccssr.controller("GoalDetailCtrl",
       return $scope.editFieldVisible = true;
     }
 
-    // This function is bound to an ng-click directive on the edit button
+    // This function is bound to an ng-click on the Save Changes button
     $scope.editGoal = function(nameInput, typeInput, ObjInput, startDateInput, endDateInput) {
       let clickEdit = $scope.selectedGoal.id;
       console.log("clickEdit", clickEdit);
@@ -63,9 +65,6 @@ Sccssr.controller("GoalDetailCtrl",
       return $scope.editFieldVisible = false;
     };
 
-
-
-
 		// This function is bound to an ng-click directive on the delete button in goal-detail
 		$scope.deleteGoal = function(event) {
       let clickDelete = event.target.id;
@@ -73,7 +72,34 @@ Sccssr.controller("GoalDetailCtrl",
 			.delete(`https://sccssr.firebaseio.com/goals/${clickDelete}.json`)
 			.then(() => $location.url("/"));
       console.log(event);
-    }
+    };
+
+    // This function is an attempt at 3-way binding
+    $scope.init = function(id, property) {
+      console.log("property", property);
+      console.log("id",id);
+      // Bind firebase data to scoped variable data
+      let ref = new Firebase("https://sccssr.firebaseio.com/goals/"+id);
+
+      // setup a switch statement
+      ref.update({
+        name: property
+        // type: $scope.selectedGoal.type,
+        // objective: $scope.selectedGoal.objective,
+        // startDate: $scope.selectedGoal.startDate,
+        // endDate: $scope.selectedGoal.endDate
+      });
+    };
+
   }
 
 ]);
+
+
+
+
+
+
+
+
+

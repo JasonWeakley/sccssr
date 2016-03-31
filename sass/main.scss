@@ -21,3 +21,14 @@ h1 {
 	font-size: 6em;
 	text-decoration: none;
 }
+
+input {
+	background-color: $yel-do;
+	border: 2px solid $blu-do;
+	border-radius: 4px;
+	padding: 10px;
+	width: 90%;
+	display: block;
+	outline: none;
+	box-shadow: 0 0 10px #9ecaed;
+}

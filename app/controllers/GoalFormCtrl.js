@@ -44,7 +44,7 @@ Sccssr.controller("GoalFormCtrl",
 
 			// The $http.post() method returns a promise, so you can use then()
 			).then(
-				() => $location.url("/"),							// Handle resolve and reload dashboard
+				// () => $location.url("/"),							// Handle resolve and reload dashboard
 				(response) => console.log(response)		// Handle reject
 			);
 		};
