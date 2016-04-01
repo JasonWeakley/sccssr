@@ -1,23 +1,45 @@
 $yel-do: #FDEF46; // Do Over color scheme
 $blu-do: #26C8EF; // Do Over color scheme
 // $serif-do: 
-// $sans-do:
-
-input {
-	display: block;
-}
+$sans-do: 'Lato', sans-serif;
 
 body {
+	font-family: $sans-do;
+  padding: 0;
+  margin: 0;
 	background-color: $yel-do;
 	color: $blu-do;
 }
 
+nav {
+  background-color: #FEF26B;
+  padding: 5px;
+
+  ul {
+    li {
+    	font-family: $sans-do;
+      color: inherit;
+      text-decoration: none;
+      display: inline;
+      list-style-type: none;
+      padding: 5px;
+      margin: 15px 0;
+      a {
+	      font-family: 'Lato', sans-serif;
+	      text-decoration: none;
+        color: inherit;
+      }
+    }
+  }
+}
+
 h1 {
+	font-family: $sans-do;
 	font-weight: bold;
 }
 
 .plus-goal {
-	font-family: Arial;
+	// font-family: Arial;
 	font-size: 6em;
 	text-decoration: none;
 }
