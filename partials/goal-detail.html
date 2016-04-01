@@ -17,4 +17,5 @@
       <input type="date" placeholder="{{ selectedGoal.endDate }}End Date" ng-model="selectedGoal.endDate" ng-change="init(selectedGoal.id, selectedGoal.endDate)">
     </div>
   </div>
+  <button id="{{selectedGoal.id}}" ng-click="deleteGoal($event)">Delete Goal</button>
 </div>
