@@ -1,25 +1,20 @@
 <div class="text--small">
   <nav ng-include="'partials/nav.html'"></nav>
   <div>
-    <h1>{{ selectedGoal.name }}</h1>
     <div ng-hide="editorEnabled">
       <input placeholder="{{ selectedGoal.name }}" ng-model="selectedGoal.name" ng-change="init(selectedGoal.id, selectedGoal.name)">
-      <!-- <a href="/#/goals/{{selectedGoal.id}}" >Save</a> -->
     </div>
-    <p>Type: {{ selectedGoal.type }}</p>
-    <p>Objective: {{ selectedGoal.objective }}</p>
-    <p>Start Date: {{ selectedGoal.startDate }}</p>
-    <p>End Date: {{ selectedGoal.endDate }}</p>
+    <div ng-hide="editorEnabled">
+      <input placeholder="{{ selectedGoal.type }}" ng-model="selectedGoal.type" ng-change="init(selectedGoal.id, selectedGoal.type)">
+    </div>
+    <div ng-hide="editorEnabled">
+      <input placeholder="{{ selectedGoal.objective }}Objective" ng-model="selectedGoal.objective" ng-change="init(selectedGoal.id, selectedGoal.objective)">
+    </div>
+    <div ng-hide="editorEnabled">
+      <input type="date" placeholder="{{ selectedGoal.startDate }}" ng-model="selectedGoal.startDate" ng-change="init(selectedGoal.id, selectedGoal.startDate)">
+    </div>
+    <div ng-hide="editorEnabled">
+      <input type="date" placeholder="{{ selectedGoal.endDate }}" ng-model="selectedGoal.endDate" ng-change="init(selectedGoal.id, selectedGoal.endDate)">
+    </div>
   </div>
-	<!-- <button id="{{selectedGoal.id}}" ng-click="showEditField()">Edit</button>
-  <button id="{{selectedGoal.id}}" ng-click="deleteGoal($event)">Delete</button>
-
-  <div ng-if="editFieldVisible===true">
-  	<input type="text" name="nameInput" placeholder="New Name" ng-model="selectedGoal.name">
-    <input type="text" name="typeInput" placeholder="New Type" ng-model="selectedGoal.type">
-    <input type="text" name="ObjInput" placeholder="New Objective" maxlength="140" ng-model="selectedGoal.objective">
-    <input type="date" date="startDateInput" placeholder="New Start Date" ng-model="selectedGoal.startDate">
-  	<input type="date" date="endDateInput" placeholder="New End Date" ng-model="selectedGoal.endDate">
-  	<button ng-click="editGoal(nameInput, typeInput, ObjInput, startDateInput, endDateInput)">Save Changes</button>
-  </div>-->
 </div>
