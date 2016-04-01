@@ -2,19 +2,19 @@
   <nav ng-include="'partials/nav.html'"></nav>
   <div>
     <div ng-hide="editorEnabled">
-      <input placeholder="{{ selectedGoal.name }}" ng-model="selectedGoal.name" ng-change="init(selectedGoal.id, selectedGoal.name)">
+      <input placeholder="{{ selectedGoal.name }}Name" ng-model="selectedGoal.name" ng-change="init(selectedGoal.id, selectedGoal.name)">
     </div>
     <div ng-hide="editorEnabled">
-      <input placeholder="{{ selectedGoal.type }}" ng-model="selectedGoal.type" ng-change="init(selectedGoal.id, selectedGoal.type)">
+      <input placeholder="{{ selectedGoal.type }}Type" ng-model="selectedGoal.type" ng-change="init(selectedGoal.id, selectedGoal.type)">
     </div>
     <div ng-hide="editorEnabled">
       <input placeholder="{{ selectedGoal.objective }}Objective" ng-model="selectedGoal.objective" ng-change="init(selectedGoal.id, selectedGoal.objective)">
     </div>
     <div ng-hide="editorEnabled">
-      <input type="date" placeholder="{{ selectedGoal.startDate }}" ng-model="selectedGoal.startDate" ng-change="init(selectedGoal.id, selectedGoal.startDate)">
+      <input type="date" placeholder="{{ selectedGoal.startDate }}Start Date" ng-model="selectedGoal.startDate" ng-change="init(selectedGoal.id, selectedGoal.startDate)">
     </div>
     <div ng-hide="editorEnabled">
-      <input type="date" placeholder="{{ selectedGoal.endDate }}" ng-model="selectedGoal.endDate" ng-change="init(selectedGoal.id, selectedGoal.endDate)">
+      <input type="date" placeholder="{{ selectedGoal.endDate }}End Date" ng-model="selectedGoal.endDate" ng-change="init(selectedGoal.id, selectedGoal.endDate)">
     </div>
   </div>
 </div>
