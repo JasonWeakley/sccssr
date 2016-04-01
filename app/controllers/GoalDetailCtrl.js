@@ -74,7 +74,7 @@ Sccssr.controller("GoalDetailCtrl",
       console.log(event);
     };
 
-    // This function is an attempt at 3-way binding
+    // 3-way binding when updating goals
     $scope.init = function(id, property) {
       console.log("property", property);
       console.log("id",id);
@@ -82,13 +82,25 @@ Sccssr.controller("GoalDetailCtrl",
       let ref = new Firebase("https://sccssr.firebaseio.com/goals/"+id);
 
       // setup a switch statement
-      ref.update({
-        name: property
+      if (property = $scope.selectedGoal.name) {
+          ref.update({name: property});
+        } if (property = $scope.selectedGoal.type) {
+          ref.update({type: property});
+        } if (property = $scope.selectedGoal.objective) {
+          ref.update({objective: property});
+        } if (property = $scope.selectedGoal.startDate) {
+          ref.update({startDate: property});
+        } if (property = $scope.selectedGoal.endDate) {
+          ref.update({endDate: property});
+        }
+
+      // ref.update({
+      //   name: property
         // type: $scope.selectedGoal.type,
         // objective: $scope.selectedGoal.objective,
         // startDate: $scope.selectedGoal.startDate,
         // endDate: $scope.selectedGoal.endDate
-      });
+      // });
     };
 
   }
