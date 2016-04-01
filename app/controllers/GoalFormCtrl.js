@@ -16,7 +16,7 @@ Sccssr.controller("GoalFormCtrl",
 			uid: "",
 			startDate: new Date(newGoal.startDate),
 			endDate: null,
-			objective: null,
+			objective: "",
 			counter: 0
 		};
 
@@ -37,15 +37,15 @@ Sccssr.controller("GoalFormCtrl",
 				type: $scope.newGoal.type,
 				endDate: $scope.newGoal.endDate,
 				startDate: $scope.newGoal.startDate,
-				uid: $scope.userId,
-				objective: $scope.objective,
-				counter: $scope.counter
+				objective: $scope.newGoal.objective,
+				counter: $scope.newGoal.counter,
+				uid: $scope.userId
 			})
 
 			// The $http.post() method returns a promise, so you can use then()
 			).then(
 				// () => $location.url("/"),							// Handle resolve and reload dashboard
-				(response) => console.log(response)		// Handle reject
+				(response) => console.log("Response",response)		// Handle reject
 			);
 		};
 	} 

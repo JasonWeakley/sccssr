@@ -1,11 +1,23 @@
 <section>
 	<nav ng-include="'partials/nav.html'"></nav>
 	<div>
-    <h1>Name: {{ newGoal.name }}</h1>
-  	<input type="text" name="nameInput" placeholder="{{newGoal.name}}New Goal Name" ng-model="newGoal.name">
+		<h1>Add a new goal</h1>
+
+		<form>
+	    Goal name: <input type="text" autofocus="true" ng-model="newGoal.name" />
+	    Goal type: <input type="text" ng-model="newGoal.type" />
+	    Objective: <input type="text" maxlength="140" ng-model="newGoal.objective" />
+	  	Start date: <input type="date" ng-model="newGoal.startDate" />
+	  	End date: <input type="date" ng-model="newGoal.endDate" />
+	  	Counter: <input type="number" ng-model="newGoal.counter" />
+		  <button ng-click="addGoal()">Add Goal</button>
+		</form>
+		
+    <!-- <h1>Name: {{ newGoal.name }}</h1> -->
+  	<!-- <input type="text" name="nameInput" placeholder="{{newGoal.name}}New Goal Name" ng-model="newGoal.name" ng-change="init(selectedGoal.id, selectedGoal.name)">
     <p>Type: {{ selectedGoal.type }}</p>
     <p>Objective: {{ selectedGoal.objective }}</p>
     <p>Start Date: {{ selectedGoal.startDate }}</p>
-    <p>End Date: {{ selectedGoal.endDate }}</p>
+    <p>End Date: {{ selectedGoal.endDate }}</p> -->
   </div>
 </section>

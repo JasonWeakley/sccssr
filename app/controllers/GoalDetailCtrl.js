@@ -81,7 +81,7 @@ Sccssr.controller("GoalDetailCtrl",
       // Bind firebase data to scoped variable data
       let ref = new Firebase("https://sccssr.firebaseio.com/goals/"+id);
 
-      // setup a switch statement
+      // if statement looks for changes made by user, adds to firebase
       if (property = $scope.selectedGoal.name) {
           ref.update({name: property});
         } if (property = $scope.selectedGoal.type) {
@@ -94,13 +94,6 @@ Sccssr.controller("GoalDetailCtrl",
           ref.update({endDate: property});
         }
 
-      // ref.update({
-      //   name: property
-        // type: $scope.selectedGoal.type,
-        // objective: $scope.selectedGoal.objective,
-        // startDate: $scope.selectedGoal.startDate,
-        // endDate: $scope.selectedGoal.endDate
-      // });
     };
 
   }
