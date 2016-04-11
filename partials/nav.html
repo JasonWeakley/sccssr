@@ -1,13 +1,23 @@
-<nav>
-  <ul>
-    <li><a href="#/">Dashboard</a></li>
-    <!-- <li><a href="#/"><span ng-include="'partials/search.html'"></span></a></li> -->
-    <li class="plus-goal"><a href="/#/goals/new">+</a></li>
-    <li class="align-right">
+<nav class="nav">
+  <div class="nav-top-row">
+    <div class="odometer">
+      <a href="#/">
+        <img border="0" alt="Sccssr Dashboard" src="./images/dashboard-icon.png">
+      </a>
+    </div>
+    <div class="logout-login">
       <a href="#/logout" ng-click="logout()">
-        <span ng-if="isAuthenticated()">Logout</span>
+        <span ng-if="isAuthenticated()">
+          <img border="0" alt="Sccssr Dashboard" src="./images/sign-off.png">
+        </span>
         <span ng-if="!isAuthenticated()">Login</span>
       </a>
-    </li>
-  </ul>
+    </div>
+  </div>
+  <div class="nav-botm-row">
+    <div class="plus-goal">
+      <a href="/#/goals/new">+</a>
+    </div>
+  </div>
 </nav>
+  

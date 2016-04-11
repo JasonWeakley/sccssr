@@ -1,16 +1,42 @@
 <section>
-	<nav ng-include="'partials/nav.html'"></nav>
-	<div>
-		<h1>Add a new goal</h1>
+	<div class="container">
+		<div class="dash-icon-div">
+      <a href="#/">
+        <img border="0" alt="Sccssr Dashboard" src="./images/dashboard-icon.png">
+      </a>
+    </div>
+    
+		<h1 class="h1-new-goal">Create New Calendar Goal</h1>
 
 		<form>
-	    Goal name: <input type="text" autofocus="true" ng-model="newGoal.name" />
-	    Goal type: <input type="text" ng-model="newGoal.type" />
-	    Objective: <input type="text" maxlength="140" ng-model="newGoal.objective" />
-	  	Start date: <input type="date" ng-model="newGoal.startDate" />
-	  	End date: <input type="date" ng-model="newGoal.endDate" />
-	  	Counter: <input type="number" ng-model="newGoal.counter" />
-		  <button ng-click="addGoal()">Add Goal</button>
+	    <div class="form-field">
+		    <p>Goal name:</p><input class="input-field" type="text" autofocus="true" ng-model="newGoal.name" />
+	    </div>
+
+	    <div class="form-field">
+		    <p>Goal type:</p><input class="input-field" type="text" ng-model="newGoal.type" />
+	    </div>
+
+	    <div class="form-field">
+		    <p>Objective:</p><input class="input-field" type="text" maxlength="140" ng-model="newGoal.objective" />
+	    </div>
+
+	    <div class="form-field">
+		  	<p>Start date:</p><input class="input-field" type="date" ng-model="newGoal.startDate" />
+	    </div>
+
+	    <div class="form-field">
+		  	<p>End date:</p><input class="input-field" type="date" ng-model="newGoal.endDate" />
+	    </div>
+<!-- 
+	    <div class="form-field">
+		  	<p>Counter:</p><input class="input-field" type="number" ng-model="newGoal.counter" />
+	    </div> -->
+
+	    <div class="seventy5">
+			  <a href="#/goals/addnew" class="add-btn"><button ng-click="addGoal()" class="form-field">Save</button></a>
+	    </div>
+
 		</form>
 		
     <!-- <h1>Name: {{ newGoal.name }}</h1> -->

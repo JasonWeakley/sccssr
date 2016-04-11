@@ -1,0 +1,21 @@
+// goal-detail.scss
+
+.detail-field {
+	@include input-field;
+}
+
+.delete-btn {
+	@include blue-button;
+}
+
+.dash-icon-div {
+	width: 10%;
+	text-align: center;
+	display: block;
+	margin: 0px auto;
+	
+	img {
+		max-width:100%;
+		max-height:100%;
+	}
+}
