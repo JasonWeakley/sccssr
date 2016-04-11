@@ -1,0 +1,43 @@
+// new-goal-list.scss
+
+.h1-new-goal {
+	box-sizing: border-box;
+	width: 100%;
+	text-align: center;
+	font-size: 2.4em;
+	font-family: $serif-do;
+	font-weight: lighter;
+}
+
+.new-goal-list {
+	@include item-box;
+	width: 33%;
+	text-align: center;
+	margin: 5px auto 0;
+
+	li {
+		a {
+			@include link-style;
+			font-family: $serif-do;
+			font-size: 2em;
+		}
+	}
+}
+
+.input-field {
+	@include input-field;
+}
+
+.seventy5 {
+	width: 50%;
+	margin: 5px auto 30px;
+}
+
+.add-btn {
+	@include link-style;
+	color: inherit;
+
+  button {
+		@include blue-button;
+  }
+}

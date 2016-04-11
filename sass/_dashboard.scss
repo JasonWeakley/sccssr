@@ -1,0 +1,27 @@
+// dashboard.scss
+
+.dash-h1 {
+	font-family: $serif-do;
+	font-weight: lighter;
+	font-size: 4em;
+	text-align: center;
+	margin: 0px auto -10px;
+}
+
+.dash-slogan {
+	font-family: $serif-do;
+	font-weight: lighter;
+	text-align: center;
+}
+
+.goal-box {
+	@include item-box;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+
+	h3 {
+		padding: 0;
+		margin: 0;
+	}
+}

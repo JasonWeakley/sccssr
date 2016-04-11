@@ -25,11 +25,11 @@ Sccssr.config(["$routeProvider",
 				controller: "GoalCtrl",
 				resolve: { isAuth }
 			}).
-			// when("/goals/list", {
-   //      templateUrl: "partials/dashboard.html",
-   //      controller: "GoalCtrl",
-   //      resolve: { isAuth }
-   //    }).
+			when("/goals/addnew", {
+        templateUrl: "partials/bounce-loader.html",
+        controller: "PageCtrl",
+        resolve: { isAuth }
+      }).
 		  when("/login", {
 	      templateUrl: "partials/login.html",
 	      controller: "LoginCtrl"

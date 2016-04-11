@@ -1,21 +1,27 @@
 <div class="text--small">
-  <nav ng-include="'partials/nav.html'"></nav>
-  <div>
-    <div ng-hide="editorEnabled">
-      <input placeholder="{{ selectedGoal.name }}Name" ng-model="selectedGoal.name" ng-change="init(selectedGoal.id, selectedGoal.name)">
+  <div class="container">
+    <div class="dash-icon-div">
+      <a href="#/">
+        <img border="0" alt="Sccssr Dashboard" src="./images/dashboard-icon.png">
+      </a>
     </div>
-    <div ng-hide="editorEnabled">
-      <input placeholder="{{ selectedGoal.type }}Type" ng-model="selectedGoal.type" ng-change="init(selectedGoal.id, selectedGoal.type)">
+    <div class="form-field" ng-hide="editorEnabled">
+      <input placeholder="{{ selectedGoal.name }}Name" ng-model="selectedGoal.name" ng-change="init(selectedGoal.id, selectedGoal.name)" class="detail-field">
     </div>
-    <div ng-hide="editorEnabled">
-      <input placeholder="{{ selectedGoal.objective }}Objective" ng-model="selectedGoal.objective" ng-change="init(selectedGoal.id, selectedGoal.objective)">
+    <div class="form-field" ng-hide="editorEnabled">
+      <input placeholder="{{ selectedGoal.type }}Type" ng-model="selectedGoal.type" ng-change="init(selectedGoal.id, selectedGoal.type)" class="detail-field">
     </div>
-    <div ng-hide="editorEnabled">
-      <input type="date" placeholder="{{ selectedGoal.startDate }}Start Date" ng-model="selectedGoal.startDate" ng-change="init(selectedGoal.id, selectedGoal.startDate)">
+    <div class="form-field" ng-hide="editorEnabled">
+      <input placeholder="{{ selectedGoal.objective }}Objective" ng-model="selectedGoal.objective" ng-change="init(selectedGoal.id, selectedGoal.objective)" class="detail-field">
     </div>
-    <div ng-hide="editorEnabled">
-      <input type="date" placeholder="{{ selectedGoal.endDate }}End Date" ng-model="selectedGoal.endDate" ng-change="init(selectedGoal.id, selectedGoal.endDate)">
+    <div class="form-field" ng-hide="editorEnabled">
+      <input type="date" placeholder="{{ selectedGoal.startDate }}Start Date" ng-model="selectedGoal.startDate" ng-change="init(selectedGoal.id, selectedGoal.startDate)" class="detail-field">
+    </div>
+    <div class="form-field" ng-hide="editorEnabled">
+      <input type="date" placeholder="{{ selectedGoal.endDate }}End Date" ng-model="selectedGoal.endDate" ng-change="init(selectedGoal.id, selectedGoal.endDate)" class="detail-field">
     </div>
   </div>
-  <button id="{{selectedGoal.id}}" ng-click="deleteGoal($event)">Delete Goal</button>
+  <div class="seventy5">
+    <button class="delete-btn" id="{{selectedGoal.id}}" ng-click="deleteGoal($event)">Delete Goal</button>
+  </div>
 </div>
